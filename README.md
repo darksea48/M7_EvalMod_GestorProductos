@@ -391,6 +391,11 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ---
 
+### Documentación Adicional
+- [Documentación de Django](https://docs.djangoproject.com/)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/)
+- [MySQL Documentation](https://dev.mysql.com/doc/)
+
 ⭐ Si este proyecto te ha sido útil, ¡considera darle una estrella en GitHub!
 
 📚 **Proyecto desarrollado como parte del Bootcamp Full Stack Python/Django**
