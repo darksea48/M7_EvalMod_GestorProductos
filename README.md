@@ -268,7 +268,19 @@ urlpatterns = [
     path('productos/<int:id>/eliminar/', views.eliminar_producto, name='eliminar_producto'),
     path('productos/buscar/', views.buscar_productos, name='buscar_productos'),
     
-    # Categorías y Etiquetas...
+    # Categorías
+    path('categorias/', views.CategoriaListView.as_view(), name='lista_categorias'),
+    path('categorias/crear/', views.CategoriaCreateView.as_view(), name='crear_categoria'),
+    path('categorias/<int:pk>/editar/', views.CategoriaUpdateView.as_view(), name='editar_categoria'),
+    path('categorias/<int:id>/eliminar/', views.eliminar_categoria, name='eliminar_categoria'),
+    path('categorias/<int:pk>/productos/', views.CategoriaProductosListView.as_view(), name='categoria_productos'),
+
+    # Etiquetas
+    path('etiquetas/', views.EtiquetaListView.as_view(), name='lista_etiquetas'),
+    path('etiquetas/crear/', views.EtiquetaCreateView.as_view(), name='crear_etiqueta'),
+    path('etiquetas/<int:pk>/editar/', views.EtiquetaUpdateView.as_view(), name='editar_etiqueta'),
+    path('etiquetas/<int:id>/eliminar/', views.eliminar_etiqueta, name='eliminar_etiqueta'),
+    path('etiquetas/<int:pk>/productos/', views.EtiquetaProductosListView.as_view(), name='etiqueta_productos'),
 ]
 ```
 
@@ -276,7 +288,7 @@ urlpatterns = [
 
 ### 🔍 Búsqueda Avanzada
 - **Múltiples campos**: Busca en nombre, descripción, categoría y etiquetas
-- **Búsqueda inteligente**: No distingue mayúsculas/minúsculas
+- **Búsqueda insensible**: No distingue mayúsculas/minúsculas
 - **Coincidencias parciales**: Encuentra términos dentro de palabras
 - **Sin duplicados**: Usa `distinct()` para evitar repeticiones
 - **Feedback visual**: Muestra cantidad de resultados encontrados
@@ -381,4 +393,4 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ⭐ Si este proyecto te ha sido útil, ¡considera darle una estrella en GitHub!
 
-📚 **Proyecto desarrollado como parte del Bootcamp Full Stack Python**
+📚 **Proyecto desarrollado como parte del Bootcamp Full Stack Python/Django**
