@@ -125,7 +125,7 @@ pip install mysqlclient
 
 #### Crear base de datos:
 ```sql
-CREATE DATABASE gestorproductos CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE gestorproductos CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci;
 ```
 
 #### Configurar settings.py (si es necesario):
@@ -169,9 +169,9 @@ La aplicación estará disponible en: `http://127.0.0.1:8000/`
 
 ### Navegación Principal
 1. **Productos**: Gestionar inventario de productos
+    1.1 **Búsqueda**: Búsqueda avanzada en múltiples campos (nombre, descripción, categoría, etiquetas)
 2. **Categorías**: Organizar productos por categorías
 3. **Etiquetas**: Sistema de etiquetado flexible
-4. **Búsqueda**: Búsqueda avanzada en múltiples campos
 
 ### Funcionalidades por Módulo
 
@@ -366,14 +366,14 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 **Douglas Suárez Zamorano**
 - GitHub: [@darksea48](https://github.com/darksea48)
-- Email: douglas.suarez@example.com
+- Email: d.suarez.zamorano@gmail.com
 
 ## 🙏 Agradecimientos
 
-- **Django Team**: Por el excelente framework web
-- **Bootstrap Team**: Por el framework CSS
-- **MySQL Team**: Por la base de datos robusta
-- **Comunidad Open Source**: Por las herramientas y librerías utilizadas
+- **Cynthia Castillo y Ricardo Vega**: Mis profesores del Bootcamp de Python/Django
+- **Valeria Jara Bugueño**: Mi amada esposa que me ha estado acompañando en todo este trayecto en este curso
+- **Cristian Astudillo y Gerard Bourguett**: Mis grandes amigos que me han apoyado en todo
+- **Joaquín González**: Mi compañero de trabajo que me ha acompañado en todo este curso con buenos tips de Python
 
 ---
 
