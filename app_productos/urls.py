@@ -26,4 +26,5 @@ urlpatterns = [
     path('etiquetas/crear/', views.EtiquetaCreateView.as_view(), name='crear_etiqueta'),
     path('etiquetas/<int:pk>/editar/', views.EtiquetaUpdateView.as_view(), name='editar_etiqueta'),
     path('etiquetas/<int:id>/eliminar/', views.eliminar_etiqueta, name='eliminar_etiqueta'),
+    path('etiquetas/<int:pk>/productos/', views.EtiquetaProductosListView.as_view(), name='etiqueta_productos'),
 ]

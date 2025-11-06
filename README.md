@@ -233,9 +233,9 @@ class DetalleProducto(models.Model):
 ```
 
 ### Relaciones Implementadas
-- **OneToOne**: Producto ↔ DetalleProducto
-- **ForeignKey**: Producto → Categoría (Many-to-One)
-- **ManyToMany**: Producto ↔ Etiqueta
+- **Uno a Uno (1:1)** con el campo **OneToOneField**: Producto ↔ DetalleProducto
+- **Uno a Muchos (1:N)** con el campo **ForeignKey**: Producto → Categoría (Many-to-One)
+- **Muchos a Muchos (N:M)** con el campo **ManyToManyField**: Producto ↔ Etiqueta
 
 ## 🔧 API y Vistas
 
@@ -248,6 +248,8 @@ class DetalleProducto(models.Model):
 - `ProductoDetailView`: Detalle de producto
 - `CategoriaListView`: Lista de categorías con conteo
 - `EtiquetaListView`: Lista de etiquetas con conteo
+- `CategoriaProductosListView`: Lista de productos por categoría
+- `EtiquetaProductosListView`: Lista de productos por etiqueta
 
 #### Vistas Basadas en Funciones (FBV)
 - `buscar_productos`: Búsqueda avanzada con Q objects

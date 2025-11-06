@@ -185,6 +185,7 @@ class CategoriaProductosListView(ListView):
         context = super().get_context_data(**kwargs)
         context['context'] = 'productos'
         return context
+
 # Views para Etiquetas
 class EtiquetaListView(ListView):
     model = Etiqueta
@@ -245,3 +246,17 @@ def eliminar_etiqueta(request, id):
     etiqueta.delete()
     messages.success(request, "La etiqueta ha sido eliminada exitosamente.")
     return redirect('lista_etiquetas')
+
+class EtiquetaProductosListView(ListView):
+    model = Producto
+    template_name = 'list.html'
+    context_object_name = 'productos'
+
+    def get_queryset(self):
+        etiqueta_id = self.kwargs['pk']
+        return Producto.objects.filter(etiquetas__id=etiqueta_id)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['context'] = 'productos'
+        return context
