@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Main Menu{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bienvenido al Sistema de Gestión de Productos</h1>
+        <p class="lead">Utilice el menú de navegación para gestionar productos, categorías y etiquetas.</p>
+    </div>
+    <div class="text-center row justify-content-center mt-5">
+        <div class="col-md-4">
+            <a href="{% url 'lista_productos' %}" class="w-100 mb-3 text-decoration-none">
+                <div class="card-zoom card bg-primary text-white py-5"><i class="bi bi-cart-check-fill"></i> Ver Productos</div></a>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'lista_categorias' %}" class="w-100 mb-3 text-decoration-none">
+                <div class="card-zoom card bg-secondary text-white py-5"><i class="bi bi-bookmarks-fill"></i> Ver Categorías</div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'lista_etiquetas' %}" class="w-100 mb-3 text-decoration-none">
+                <div class="card-zoom card bg-success text-white py-5"><i class="bi bi-tags-fill"></i> Ver Etiquetas</div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

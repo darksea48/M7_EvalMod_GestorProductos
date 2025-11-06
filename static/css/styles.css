@@ -1,0 +1,17 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Card Zoom Effect */  
+.card-zoom {
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-zoom:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
