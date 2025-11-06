@@ -169,9 +169,9 @@ La aplicación estará disponible en: `http://127.0.0.1:8000/`
 
 ### Navegación Principal
 1. **Productos**: Gestionar inventario de productos
-    1.1 **Búsqueda**: Búsqueda avanzada en múltiples campos (nombre, descripción, categoría, etiquetas)
 2. **Categorías**: Organizar productos por categorías
 3. **Etiquetas**: Sistema de etiquetado flexible
+4. **Búsqueda**: Búsqueda avanzada en múltiples campos (nombre, descripción, categoría, etiquetas)
 
 ### Funcionalidades por Módulo
 
